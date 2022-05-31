@@ -47,6 +47,7 @@ class CalculatorTests: XCTestCase {
         
     }
     
+    
     func testAddAssert() { // para ver como funcionan los Assert
         print("RRRR \(#function)")
         // 1. Arrange
@@ -57,6 +58,39 @@ class CalculatorTests: XCTestCase {
         // 3.
         XCTAssertEqual(resultadoEsperado, resultadoActual, "el metodo falla")
         
+    }
+    
+    func testAddBDD() { // para ver como funcionan los Assert
+        print("RRRR \(#function)")
+        // 1. Give
+        let resultadoEsperado = 30
+        var resultadoActual: Int
+        // 2. When
+        resultadoActual = sut.add(n1: 10, n2: 20)
+        // 3. Then
+        XCTAssertEqual(resultadoEsperado, resultadoActual, "el metodo falla")
+        
+    }
+    
+    func testAdd() { // para ver como funcionan los Assert
+        print("RRRR \(#function)")
+
+        XCTAssertEqual(30, sut.add(n1: 10, n2: 20), "el metodo falla")
+        
+    }
+    
+    func testAssetTypes() { // tipos
+        print("RRRR \(#function)")
+//        XCTAssert
+        // riesgo transaccional / enrolamiento id afiliacion 21 / la sesion se ocupa para
+        // tokenisacion de tarjetas alta y eliminacion
+        XCTAssertTrue(1 == 1)
+        XCTAssertFalse(1 != 1)
+        XCTAssertNil(nil)
+        XCTAssertNotNil(sut)
+        XCTAssertEqual(30, sut.add(n1: 10, n2: 20))
+        XCTAssertEqual("rufus", "rufus")
+        XCTAssertGreaterThan(12, 11)
     }
     
 }

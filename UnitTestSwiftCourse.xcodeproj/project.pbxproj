@@ -17,7 +17,7 @@
 		771515E128459E390056CAD2 /* UnitTestSwiftCourseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771515E028459E390056CAD2 /* UnitTestSwiftCourseUITests.swift */; };
 		771515E328459E390056CAD2 /* UnitTestSwiftCourseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771515E228459E390056CAD2 /* UnitTestSwiftCourseUITestsLaunchTests.swift */; };
 		771515F12845A3990056CAD2 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771515F02845A3990056CAD2 /* Calculator.swift */; };
-		771515F22845A3990056CAD2 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771515F02845A3990056CAD2 /* Calculator.swift */; };
+		771515F62845A5450056CAD2 /* CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771515F52845A5450056CAD2 /* CalculatorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +52,7 @@
 		771515E028459E390056CAD2 /* UnitTestSwiftCourseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestSwiftCourseUITests.swift; sourceTree = "<group>"; };
 		771515E228459E390056CAD2 /* UnitTestSwiftCourseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestSwiftCourseUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		771515F02845A3990056CAD2 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
+		771515F52845A5450056CAD2 /* CalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +118,7 @@
 		771515D528459E390056CAD2 /* UnitTestSwiftCourseTests */ = {
 			isa = PBXGroup;
 			children = (
+				771515F32845A50A0056CAD2 /* xctest */,
 				771515D628459E390056CAD2 /* UnitTestSwiftCourseTests.swift */,
 			);
 			path = UnitTestSwiftCourseTests;
@@ -135,6 +137,14 @@
 			isa = PBXGroup;
 			children = (
 				771515F02845A3990056CAD2 /* Calculator.swift */,
+			);
+			path = xctest;
+			sourceTree = "<group>";
+		};
+		771515F32845A50A0056CAD2 /* xctest */ = {
+			isa = PBXGroup;
+			children = (
+				771515F52845A5450056CAD2 /* CalculatorTests.swift */,
 			);
 			path = xctest;
 			sourceTree = "<group>";
@@ -282,7 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				771515D728459E390056CAD2 /* UnitTestSwiftCourseTests.swift in Sources */,
-				771515F22845A3990056CAD2 /* Calculator.swift in Sources */,
+				771515F62845A5450056CAD2 /* CalculatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

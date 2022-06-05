@@ -14,83 +14,55 @@ class CalculatorTests: XCTestCase {
  
     var sut: Calculator!
     
-    override func setUp() { // inicializacion
-        print("RRRR \(#function)")
+    override func setUp()
+    {
+        print("RRRR setUp()")
         sut = Calculator()
-        
     }
     
-    override func tearDown() {
-        print("RRRR \(#function)")
+    override func tearDown()
+    {
+        print("RRRR tearDown()")
         sut = nil
     }
     
-    func testCalculatorNotNil() {
-        
-        // haciendo uso de los Assert
-        // solo ejecutar un Assert por metodo para que no surjan conflictos
-        //  los assert pueden mostrar mensajes
-        
-        
-//        XCTAssertNotNil(sut)
-//        XCTAssertNil(sut)
-        print("RRRR \(#function)")
-        XCTAssertNotNil(sut, "SUT deberia ser not nil en este punto")
-//        XCTAssertNil(sut, "SUT deberia de ser nil en este punto ")
-        
-        // Give When Then es un estandar
+    func testCalculatorNotNil(){
+        print("RRRR testCalculatorNotNil()")
+        XCTAssertNotNil(sut, "SUT debería ser not nil en este punto")
     }
     
-    func testCalculatorNotNil2() {
-        print("RRRR \(#function)")
-        XCTAssertNil(sut, "SUT no es nulo")
-        
-    }
-    
-    
-    func testAddAssert() { // para ver como funcionan los Assert
-        print("RRRR \(#function)")
-        // 1. Arrange
-        let resultadoEsperado = 30
-        var resultadoActual: Int
-        // 2. Act
-        resultadoActual = sut.add(n1: 10, n2: 20)
-        // 3.
-        XCTAssertEqual(resultadoEsperado, resultadoActual, "el metodo falla")
-        
-    }
-    
-    func testAddBDD() { // para ver como funcionan los Assert
-        print("RRRR \(#function)")
-        // 1. Give
-        let resultadoEsperado = 30
-        var resultadoActual: Int
-        // 2. When
-        resultadoActual = sut.add(n1: 10, n2: 20)
-        // 3. Then
-        XCTAssertEqual(resultadoEsperado, resultadoActual, "el metodo falla")
-        
-    }
-    
-    func testAdd() { // para ver como funcionan los Assert
-        print("RRRR \(#function)")
 
-        XCTAssertEqual(30, sut.add(n1: 10, n2: 20), "el metodo falla")
+    func testAdd()
+    {
+        print("RRRR \(#function)")
         
+        XCTAssertEqual(30, sut.add(n1: 10, n2: 20))
     }
     
-    func testAssetTypes() { // tipos
+    func testAssertTypes()
+    {
         print("RRRR \(#function)")
-//        XCTAssert
-        // riesgo transaccional / enrolamiento id afiliacion 21 / la sesion se ocupa para
-        // tokenisacion de tarjetas alta y eliminacion
         XCTAssertTrue(1 == 1)
-        XCTAssertFalse(1 != 1)
+        XCTAssertFalse(1 == 2)
         XCTAssertNil(nil)
         XCTAssertNotNil(sut)
         XCTAssertEqual(30, sut.add(n1: 10, n2: 20))
-        XCTAssertEqual("rufus", "rufus")
-        XCTAssertGreaterThan(12, 11)
+        XCTAssertEqual("rufus", "rufus","debe ser el mismo")
+    }
+    
+    func testDivide() {
+        print("RRRR \(#function)")
+        XCTAssertEqual(2, sut.divide(n1: 4, n2: 2))
+    }
+    
+    func testDivideByZero() {
+        print("RRRR \(#function)")
+        XCTAssertEqual(2, sut.divide(n1: 4, n2: 2))
+        XCTAssertThrowsError(try sut.divideByZero(n1: 4, n2: 0))
+    }
+    func testDisable() {
+        print("RRRR \(#function)")
+        XCTAssertEqual(0,try sut.divideByZero(n1: 4, n2: 0))
     }
     
 }

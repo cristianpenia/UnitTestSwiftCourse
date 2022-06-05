@@ -118,7 +118,7 @@
 		771515D528459E390056CAD2 /* UnitTestSwiftCourseTests */ = {
 			isa = PBXGroup;
 			children = (
-				771515F32845A50A0056CAD2 /* xctest */,
+				A6B3683B284C81B3003C7179 /* xctest */,
 				771515D628459E390056CAD2 /* UnitTestSwiftCourseTests.swift */,
 			);
 			path = UnitTestSwiftCourseTests;
@@ -141,7 +141,7 @@
 			path = xctest;
 			sourceTree = "<group>";
 		};
-		771515F32845A50A0056CAD2 /* xctest */ = {
+		A6B3683B284C81B3003C7179 /* xctest */ = {
 			isa = PBXGroup;
 			children = (
 				771515F52845A5450056CAD2 /* CalculatorTests.swift */,

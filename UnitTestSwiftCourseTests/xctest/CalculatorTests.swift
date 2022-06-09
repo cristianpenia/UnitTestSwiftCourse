@@ -65,4 +65,58 @@ class CalculatorTests: XCTestCase {
         XCTAssertEqual(0,try sut.divideByZero(n1: 4, n2: 0))
     }
     
+    func testPerformanceExample() {
+        self.measure { //  el measure se ejecuta 10 veces y se saca el promedio en ejecutar este codigo
+            sut.divide(n1: 4, n2: 2)
+        }
+    }
+    
+    func testMyArray() {
+        print("RRRR \(#function)")
+        let myArray: [Int] = [1,2,3,4,5]
+        XCTAssertNotNil(sut.myArray(arrayInt:myArray))
+        XCTAssertEqual(
+            [1,4,9,16,25],
+            sut.myArray(arrayInt: myArray)
+        )
+    }
+    
+    func testMyArray00() {
+        print("RRRR \(#function)")
+        // Given
+        var myArray = [Int]()
+        for i in 1...5 {
+            myArray.append(i)
+        }
+        
+        // When
+        let result = sut.myArray(arrayInt:myArray)
+        
+        // Then
+        let expectedResult = [1,4,9,16,25]
+        XCTAssertEqual(
+            expectedResult,
+            result
+        )
+    }
+    
+    func testMyArray01() {
+        print("RRRR \(#function)")
+        // Given
+        var myArray = [Int]()
+        for i in 1...5 {
+            myArray.append(i)
+        }
+        
+        // When
+        let result = sut.myArray(arrayInt:myArray)
+        
+        // Then
+        let expectedResult = [1,4,9,16,25]
+        XCTAssertEqual(
+            expectedResult,
+            result
+        )
+    }
+    
 }

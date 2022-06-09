@@ -28,7 +28,8 @@ class Calculator {
         return n1 / n2
     }
     
-    func arraySquared(numberArray: [Int])->[Int]{
+    func arraySquared(numberArray: [Int]) ->[Int]
+     {
         var result = [Int]()
         for number in numberArray{
             result.append(number * number)
@@ -36,8 +37,24 @@ class Calculator {
         return result
     }
     
-    func arraySquared2(numberArray: [Int])->[Int]{
+    func arraySquared2(numberArray: [Int]) ->[Int]
+    {
         return numberArray.map{numberArray in numberArray * numberArray}
+    }
+    
+    // una funcion que pasado como parametro de entrada un array de enteros nos devuelva un array de enteros pero elevado al cuadrado
+    func myArray(arrayInt: [Int]) -> [Int]
+    {
+        var arrayPow: [Int] = []
+        
+        //recorremos el array
+        for itemInt in arrayInt
+        {
+            //agregar el arreglo elevado a la potencia
+            let item = pow(Double(itemInt), 2)
+            arrayPow.append(Int(item))
+        }
+        return arrayPow
     }
 }
 
